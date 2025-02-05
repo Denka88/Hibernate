@@ -18,8 +18,8 @@ public class Main {
 
         // Создание и сохранение объекта
         Customer customer = new Customer("John Doe", "john@example.com");
-        Order order1 = new Order(LocalDate.now(), 100.0, customer);
-        Order order2 = new Order(LocalDate.now().plusDays(1), 200.0, customer);
+        Order order1 = new Order(LocalDate.now(), 100, customer);
+        Order order2 = new Order(LocalDate.now().plusDays(1), 200, customer);
 
         session.save(customer);
         session.save(order1);
