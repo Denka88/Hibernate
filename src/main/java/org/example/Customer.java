@@ -8,7 +8,6 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private Long id;
 
     @Column(name="name", nullable=false)
@@ -16,9 +15,6 @@ public class Customer {
 
     @Column(name="email", nullable=false)
     private String email;
-
-    @Column(name="customer", nullable=false)
-    private Long customer;
 
     public Customer(String name, String email) {
         this.name = name;
@@ -52,11 +48,4 @@ public class Customer {
         this.email = email;
     }
 
-    public Long getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Long customer) {
-        this.customer = customer;
-    }
 }

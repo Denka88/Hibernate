@@ -14,7 +14,7 @@ public class Order {
     @Column(name="orderDate", nullable = false)
     private LocalDate orderDate;
 
-    @Column(name="amount")
+    @Column(name="amount", nullable = false)
     private double amount;
 
     @ManyToOne
